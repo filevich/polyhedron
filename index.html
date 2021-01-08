@@ -20,6 +20,10 @@
         width:100%;
         float:left;
       }
+
+      .n-in {
+        width: 50px;
+      }
     </style>
 
   
@@ -57,6 +61,12 @@
       </label>
     </p>
 
+    <div class="row">
+      <input id="w-in" class="n-in" type="number" min="0" value="300">
+      <input id="h-in" class="n-in" type="number" min="0" value="200">
+      <input id="d-in" class="n-in" type="number" min="0" value="50">
+    </div>
+
     <span class="row">
       adaptation from <a href="https://codepen.io/desandro/pen/MGpMOV">here</a>
     </span>
@@ -80,7 +90,34 @@
       changeSide();
 
       radioGroup.addEventListener('change', changeSide );
+      
     </script>
+
+    <script>
+      (function() {
+        let root = document.documentElement;
+
+        let win = document.getElementById("w-in")
+          , hin = document.getElementById("h-in")
+          , din = document.getElementById("d-in")
+
+        win.addEventListener('input', function (evt) {
+            let w = this.value
+            root.style.setProperty('--w', w + "px")
+        })
+
+        hin.addEventListener('input', function (evt) {
+            let h = this.value
+          root.style.setProperty('--h', h + "px")
+        })
+
+        din.addEventListener('input', function (evt) {
+            let d = this.value
+          root.style.setProperty('--d', d + "px")
+        })
+      })();
+    </script>
+    
 
   </body>
 </html>

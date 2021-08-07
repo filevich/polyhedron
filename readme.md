@@ -1,6 +1,6 @@
 # pure css3 3d polyhedron
 
-adaptation from [here](https://codepen.io/desandro/pen/MGpMOV)
+adaptation from [this static version](https://codepen.io/desandro/pen/MGpMOV), I just made it interactive
 
 demo:
 
